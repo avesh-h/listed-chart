@@ -38,7 +38,7 @@ const Cards = () => {
   return (
     <div className="flex justify-between">
       {CONTENT.map((data) => {
-        return <Card data={data} />;
+        return <Card data={data} key={`${data.amount}-${data.bg}`} />;
       })}
     </div>
   );
