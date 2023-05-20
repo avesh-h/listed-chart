@@ -173,7 +173,7 @@ function NavListMenu() {
           <Typography as="a" href="#" variant="small" className="font-normal">
             <MenuItem
               {...triggers}
-              className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
+              className={`hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full ${montserrat.className}`}
             >
               <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Pages{" "}
               <ChevronDownIcon
@@ -268,7 +268,7 @@ export default function ComplexNavbar() {
         <Typography
           as="a"
           href="#"
-          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium font-bold text-xl"
+          className={`mr-4 ml-2 cursor-pointer py-1.5 font-medium font-bold text-xl ${montserrat.className}`}
         >
           DashBoard
         </Typography>

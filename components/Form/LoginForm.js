@@ -10,6 +10,10 @@ import {
 import styles from "./loginForm.module.css";
 import { getProviders, signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { Montserrat } from "next/font/google";
+import Image from "next/image";
+
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function LoginForm() {
   const [loginData, setLoginData] = useState({ email: "", password: "" });
@@ -61,7 +65,7 @@ export default function LoginForm() {
       <div className="pt-4 flex justify-between">
         {providers && Object.values(providers) && (
           <Button
-            className={`${styles.social_btn} ${styles.google_btn}`}
+            className={`${styles.social_btn} ${styles.google_btn}  ${montserrat.className} lowercase`}
             onClick={() => signInHandler(Object.values(providers)[0].id)}
           >
             Sign in with Google
@@ -75,12 +79,14 @@ export default function LoginForm() {
             Sign in with Google
           </Button>
         )} */}
-        <Button className={`${styles.social_btn} ${styles.apple_btn}`}>
+        <Button
+          className={`${styles.social_btn} ${styles.apple_btn}  ${montserrat.className} lowercase`}
+        >
           Sign in with Apple
         </Button>
       </div>
       <form
-        className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 p-[30px] rounded-2xl bg-white"
+        className={`mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 p-[30px] rounded-2xl bg-white ${montserrat.className}`}
         onSubmit={submitHandler}
       >
         <div className="mb-4 flex flex-col gap-6">
