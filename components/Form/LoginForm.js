@@ -109,7 +109,7 @@ export default function LoginForm() {
         </Button>
       </form>
       <Typography color="gray" className="mt-4 text-center font-normal">
-        Don't have an Account?
+        Don&apos;t have an Account?
         <a
           href="/"
           className="font-medium text-blue-500 transition-colors hover:text-blue-700"
