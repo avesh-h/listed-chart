@@ -13,8 +13,13 @@ const Dashboard = () => {
   const { data: session } = useSession();
   const router = useRouter();
 
+  useEffect(() => {
+    if (!session?.user) {
+      router.push("/");
+    }
+  }, [session, router]);
+
   if (!session?.user) {
-    router.push("/");
     return null;
   }
 
