@@ -1,0 +1,15 @@
+/* .full_box {
+} */
+.left_box {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right_box {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
